@@ -5,23 +5,191 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Raleway:400,900" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
     <title>Grow Outside | Connecting Kids with Nature</title>
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
 </head>
 <body>
+    <div id="home"></div>
     <nav class="nav" id="nav">
-        Hello
-    </nav>
-    <div class="header">
-        <div class="header-title">
-            Grow Outside
+        <div class="nav__title">
+           <a href="#home"><span class="nav__title--grow">GROW</span><span class="nav__title--outside"><p>outside</p></span></a>
         </div>
-        <img src="/img/sb_dunes_1.jpg" alt="" class="header-img">
-    </div>
-    <div class="about">
+        <div class="nav__menu">
+            <ul>
+                <a href="#about" class="nav-item"><li><p>about</p></li></a>
+                <a href="#support" class="nav-item"><li><p>support</p></li></a>
+                <a href="#connect" class="nav-item"><li><p>connect</p></li></a>
+            </ul>
+        </div>
+        <i class="fa fa-bars"></i>
+    </nav>
 
-    </div>
+    <header class="header">
+
+        <div class="header__title">
+            <div class="header__title--big">
+                Where you lead, they will follow
+                <br>~
+            </div>
+            <div class="header__title--small">
+                Lorem ipsum nostrum sapiente beatae archit
+                ecto est doloremque
+            </div>
+        </div>
+
+        <div class="header__img--fixed-container">
+            <img src="/img/oregon_waterfall_hor_L.png" alt="A father stands with two young sons near a waterfall" class="header__img">
+        </div>  
+    </header>
+
+    <section class="about section" id="about">
+        <div class="about__overlay"></div>
+
+        <div class="about__img--box">
+            <div class="about__img--box-container">
+                <img src="/img/kings_canyon_L.jpg" alt="A young girl stands facing a tall waterfall." class="about__img--box-container-img">
+            </div>
+        </div>
+
+        <div class="about__text--box">
+            <div class="about__text--container">
+                <div class="about__text--box-header">Our Mission</div>
+                <div class="about__text--box-subhead">Grow Outside is dedicated to connecting children with nature</div>
+                <div class="about__text--box-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi quidem sunt, tempora quis, reiciendis accusantium soluta nostrum sapiente beatae architecto est doloremque assumenda fugiat, quisquam harum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisque ultricies tempus lorem. Morbi purus ex, ornare efficitur ex suscipit, finibus pulvinar libero.</div>
+                <div class="about__text--box-symbols space-evenly">
+                    <div class="about__text--box-symbols-icon">
+                        <i class="fas fa-running"></i><br>
+                        PLAY
+                    </div>
+                    <div class="about__text--box-symbols-icon">
+                        <i class="fas fa-lightbulb"></i><br>
+                        LEARN</div>
+                    <div class="about__text--box-symbols-icon">
+                        <i class="fas fa-seedling"></i><br>
+                        GROW                    
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="quote">
+        <div class="quote__box">
+            <div class="quote__box--text">Nature is always more subtle, more intricate, more elegant than what we are able to imagine.</div>
+            <div class="quote__box--attribute">
+                &mdash; Carl Sagan &mdash;
+            </div>
+        </div>
+    </section>
+
+    <section class="support section" id="support">
+
+        <div class="support__content">
+            <div class="support__box support__box-1">
+                <div class="support__box--img support__box--img-1">
+                    <div class="support__box--photo support__box--photo-1">
+                    </div>
+                    <div class="support__box--title">start a group
+                    </div>
+                    <a href="#home"><div class="support__box--learn-more">Learn More</div></a>
+                </div>
+            </div>
+
+            <div class="support__box support__box-2">
+                <div class="support__box--img support__box--img-2">
+                    <div class="support__box--photo support__box--photo-2"></div>
+                    <div class="support__box--title">donate</div>
+                    <a href="#home"><div class="support__box--learn-more">Learn More</div></a>
+                </div>
+            </div>
+
+            <div class="support__box support__box-3">
+                <div class="support__box--img support__box--img-3">
+                    <div class="support__box--photo support__box--photo-3"></div>
+                    <div class="support__box--title">Volunteer</div>
+                    <a href="#home"><div class="support__box--learn-more">Learn More</div></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="support__stick">
+                <div class="support__stick--title">
+                    <a><p>Support</p></a>
+                </div>
+            </div>
+    </section>
+
+    <section class="contact section" id="connect">
+
+        <div class="contact__signup--box">
+            <div class="contact__signup--box-title">stay connected</div>
+            <div class="contact__signup--box-message">sign up for our newsletter</div>
+
+            <form>
+                <input type="text" placeholder="Full Name">
+                <input type="email" placeholder="name@email.com">
+                <button class="btn">submit</button>
+            </form>
+
+
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="footer__box">
+            <div class="footer__box--column">
+                <div class="footer__box--column--header">
+                    Learn more
+                </div>
+                <div class="footer__box--column--links">
+                    <ul>
+                        <a href="#about"><li>our mission</li></a>
+                        <a href="#home"><li>our team</li></a>
+                        <a href="#home"><li>careers</li></a>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__box--column">
+                <div class="footer__box--column--header">
+                    Get involved
+                </div>
+                <div class="footer__box--column--links">
+                    <ul>
+                        <a href="#support"><li>start a group</li></a>
+                        <a href="#support"><li>volunteer</li></a>
+                        <a href="#support"><li>donate</li></a>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__box--column">
+                <div class="footer__box--column--header">
+                    Connect
+                </div>
+                <div class="footer__box--column--links">
+                    <ul>
+                        <a href="#connect"><li>subscribe</li></a>
+                        <li>follow us:</li>
+                        <li>
+                            <a href="#home"><i class="fab fa-twitter"></i></a>
+                            <a href="#home"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#home"><i class="fab fa-instagram"></i></a>
+                            <a href="#home"><i class="fab fa-youtube"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__box-copyright">Copyright &copy; <span class="year">2015</span> <a href="https://mattdahlseid.github.io/" target="_blank" rel="noopener noreferrer">Matt Dahlseid</a></div>
+        </div>
+    </footer>
+
     <script src="app.js"></script>
 </body>
 </html>

@@ -1,8 +1,165 @@
 .nav {
-    height: 50px;
+    height: 40px;
     width: 100%;
-    background-color: #158866;
+    background-color: $color-green;
     position: fixed;
-    transition: top 0.3s;
     z-index: 99;
+    box-shadow: 0 4px 20px rgba($color-black, .5);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    letter-spacing: 3.5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__title {
+        letter-spacing: 2px;
+        padding: 5px 0;
+        transition: all .4s;
+        width: 350px;
+        text-align: center;
+        margin-left: 7%;
+
+        @include respond(tab-port) {
+            margin: 0 auto;
+        }
+
+        &--grow {
+            font-size: 24px;
+        }
+
+        &--outside {
+            background-color: $color-white;
+            -webkit-transform: skewX(-20deg);
+            -moz-transform: skewX(-20deg);
+            -o-transform: skewX(-20deg);
+            transform: skewX(-20deg);
+            display: inline-block;
+            line-height: 10px;
+            padding: 0px 12px 5px 12px;
+            transition: all .4s;
+            margin-left: 4px;
+        }
+
+        & a {
+            text-decoration: none;
+            color: $color-white;
+
+            & p {
+                display: inline-block;
+                color: $color-green;
+                font-size: 20px;
+                padding: 8px 0 0px 0;
+                -webkit-transform: skewX(20deg);
+                -moz-transform: skewX(20deg);
+                -o-transform: skewX(20deg);
+                transform: skewX(20deg);
+            }
+        }
+    }
+
+    &__menu {
+        font-size: 14px;
+        transition: all .5s;
+        margin-right: 7%;
+
+        @include respond(tab-port) {
+            font-size: 30px;
+            display: block;
+            background-color: black;
+            position: absolute;
+            margin-top: 40px;
+            width: 100vw;
+            transform: translateX(100%);
+            height: 100vh;
+        }
+
+        & ul {
+            width: 360px;
+            height: 100%;
+            color: white;
+            list-style-type: none;
+            text-decoration: none;
+
+            @include respond(tab-port) {
+                background-color: black;
+                margin: 0 auto;
+                padding-top: 120px;
+                position: absolute;
+                width: 100vw;
+            }
+        }
+
+        & a {
+            display: inline-block;
+            width: xx;
+            padding: 10px 20px;
+            text-align: center;
+            height: 100%;
+            transition: all .3s;
+            text-decoration: none;
+            
+            -webkit-transform: skewX(-20deg);
+            -moz-transform: skewX(-20deg);
+            -o-transform: skewX(-20deg);
+            transform: skewX(-20deg);
+            cursor: pointer;
+            
+            @include respond(tab-port) {
+                display: block;
+                position: relative;
+                background-color: transparent;
+                height: 33%;
+                width: 100%;
+            }
+
+            @media (hover: hover) {
+                &:hover {
+                    background-color: $color-white;
+                    color: $color-green;
+
+                    @include respond(tab-port) {
+                        background-color: $color-black;
+                        color: $color-green;
+                    }
+                }
+            }
+
+            & p {
+                -webkit-transform: skewX(20deg);
+                -moz-transform: skewX(20deg);
+                -o-transform: skewX(20deg);
+                transform: skewX(20deg);  
+
+                @include respond(tab-port) {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
+    & i {
+        display: none;
+
+        @include respond(tab-port) {
+            display: inline-block;
+            font-size: 20px;
+            padding-top: 10px;
+            right: 2%;
+            position: absolute;
+            cursor: pointer;
+        }
+    }
+}
+
+.active {
+    background-color: $color-white;
+    color: $color-green;
+}
+
+.margin {
+    opacity: 1;
+    display: block;
+    transform: translateX(0%);
+    transition: all .5s;
 }

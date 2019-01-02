@@ -1,0 +1,49 @@
+.quote {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url(/img/yosemite_L.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: bottom;
+    z-index: -2;
+
+    @include respond(tab-port) {
+        background-attachment: scroll;
+    }
+
+    &__box {
+        color: $color-white;
+        position: fixed;
+        display: inline-block;
+        width: 450px;
+        top: 6vw;
+        left: 2vw;
+        text-align: center;
+        letter-spacing: 3px;
+        z-index: -2;
+        font-size: 16px;
+        line-height: 34px;
+
+
+        @include respond(tab-port) {
+            top: 15vh; 
+            left: 50%;
+            margin-left: -225px;
+            position: absolute;
+        }        
+
+        @include respond(phone) {
+            width: 300px;
+            margin-left: -150px;
+            font-size: 14px;
+            line-height: 28px;
+        }
+
+
+        &--attribute {
+            margin-top: 22px;
+            text-transform: uppercase;
+        }
+    }
+}

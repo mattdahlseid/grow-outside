@@ -1,6 +1,198 @@
 .about {
-    height: 100vh;
     width: 100%;
-    background-color: $color-green;
+    height: 100vh;
+    background-color: $color-dark-gray;
+    display: flex;
+    flex-wrap: wrap;
     position: relative;
+    box-shadow: 0px 5px 20px rgba($color-black, .4), 0px -5px 20px rgba($color-black, .4);
+    overflow: hidden;
+
+    @include respond(tab-port) {
+        height: 210vh;
+    }
+
+    @include respond(phone) {
+        height: 180vh;
+    }
+
+    &__overlay {
+        width: 0;
+        height: 0;
+        border-bottom: 100vh solid $color-black;
+        border-right: 55vw solid transparent;
+        position: absolute;
+
+        @include respond(tab-port) {
+            border-bottom: 210vh solid $color-black;
+            border-right: 190vw solid transparent;
+        }
+
+        @include respond(phone) {
+            border-right: 300vw solid transparent;
+        }
+
+    }
+
+    &__img--box {
+        width: 50%;
+        height: 100%;
+        z-index: 2;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        @include respond(tab-port) {
+            position: relative;
+            height: 50%;
+            width: 100%;
+        }
+
+        @include respond(phone) {
+            margin-top: 12vh;
+            height: 30vh;
+        }
+
+        &-container {
+            position: absolute;
+            width: 350px;
+            height: 76vh;
+            left: 60%;
+            margin-left: -220px;
+            box-shadow: 4px 4px 10px rgba($color-black, .4);
+            transition: all 0.4s;
+
+            @include respond(tab-port) {
+                margin-top: 15vh;
+                width: 70%;
+                margin-left: 0;
+                margin-right: 0;
+                left: 15%;
+                height: 90vh;
+            }
+
+            @include respond(phone) {
+                height: 60vh;
+            }
+
+            &-img {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+            }
+
+            &:hover {
+                transform: translateY(-20px);
+                transform: scale(1.05);
+                box-shadow: 8px 8px 20px rgba($color-black, .4);
+            }
+
+        }
+    }
+
+    &__text--box {
+        width: 50%;
+        height: 100%;
+        z-index: 2;
+        text-align: center;
+        padding: 0 11vw 0 0;
+        display: flex;
+        align-items: center;
+
+        @include respond(tab-port) {
+            position: relative;
+            width: 70%;
+            height: 50%;
+            padding: 60px 0 0 0;
+            left: 15%;
+        }
+
+        &-header {
+            font-size: 30px;
+            text-transform: uppercase;
+            border-bottom: 1px solid $color-green;
+            letter-spacing: 3px;
+            display: inline-block;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+
+            @include respond(phone) {
+                margin-top: 12vh;
+                font-size: 24px;
+            }
+        }
+
+        &-subhead {
+            font-size: 16px;
+            margin-bottom: 20px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            line-height: 24px;
+
+            @include respond(phone) {
+                font-size: 13px;
+            }
+        }
+
+        &-text {
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+            line-height: 30px;
+        }
+
+        &-symbols {
+            width: 70%;
+            height: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            font-weight: 900;
+            letter-spacing: 3px;
+            margin: 15px auto 0 auto;
+            transform: all .5s;
+    
+            @include respond(tab-port) {
+                margin: 30px auto 0 auto;
+            }
+
+            @include respond(phone) {
+                width: 90%;
+            }
+
+            &-icon {
+                height: 100%;
+                width: 33%;
+                padding: 10px 10px 0px 10px;
+            }
+
+        }
+
+    }
+
+}
+
+.fas {
+    color: white;
+    z-index: 2;
+    font-size: 45px;
+    margin-bottom: 14px;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.fas:hover {
+    transform: scale(1.2);
+}
+
+.fa-running:hover {
+    color: rgb(85, 137, 233);
+}
+
+.fa-lightbulb:hover {
+    color: yellow;
+}
+
+.fa-seedling:hover {
+    color: $color-green;
 }

@@ -1,20 +1,81 @@
 .header {
-    &-title {
-        width: 40%;
-        height: 200vh;
-        background-color: transparent;
-        font-size: 10vw;
-        line-height: 18vw;
-        color: rgba($color-black, .5);
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+
+    &__title {
+        width: 350px;
         position: absolute;
-        z-index: 2;
-        font-family: 'Quicksand';
+        left: 7%;
+        text-align: center;
+        color: white;
+
+        @include respond(tab-port) {
+            left: 50%;
+            margin-left: -175px;
+            text-shadow: 3px 3px 0px rgba($color-black, 0.5)
+        }
+
+        @include respond(phone) {
+            margin: 0 auto;
+            width: 300px;
+            margin-left: -150px;
+        }
+
+        &--big {
+            width: 100%;
+            font-size: 45px;
+            text-transform: uppercase;
+            line-height: 70px;
+            letter-spacing: 10px;
+
+            @include respond(phone) {
+                font-size: 34px;
+                line-height: 50px;
+            }
+        }
+
+        &--small {
+            font-size: 20px;
+            letter-spacing: 5px;
+            line-height: 30px;
+            margin-top: -10px;
+
+            @include respond(phone) {
+                font-size: 16px;
+                line-height: 25px;
+            }
+        }
     }
-    
-    &-img {
-        object-fit: cover;
+
+    &__img--fixed-container {
         width: 100%;
-        height: 110vh;
-        object-position: bottom;
+        height: 100vh;
+        right: 0;
+        overflow: hidden;
+        /* added */
+        position: absolute;
+        clip: rect(0, auto, auto, 0);
+    }
+
+    &__img {
+        object-fit: cover;
+        object-position: 50% 50%;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+        right: 0;
+        transform: perspective(0px);
+
+        @include respond(tab-port) {
+            object-position: right;
+        }
+
+        @include respond(phone) {
+            object-position: 70%;
+        }
     }
 }
