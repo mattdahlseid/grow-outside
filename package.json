@@ -1,7 +1,7 @@
 {
-  "name": "bhcs",
+  "name": "Grow Outside",
   "version": "1.0.0",
-  "description": "Mock website for South Dakota Conservation Society",
+  "description": "Mock website for a fictitious nonprofit organization",
   "main": "index.js",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
