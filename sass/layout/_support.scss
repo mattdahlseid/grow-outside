@@ -140,13 +140,13 @@
             }
 
             &-1 {
-                background-image: url(../img/tent_rocks_2_L.jpg);
+                background-image: url("../img/tent_rocks_2_L.jpg");
                 background-position: 50% 90%;
                 filter: brightness(120%);
             }
 
             &-2 {
-                background-image: url(../img/crater_lake_L.jpg);
+                background-image: url("../img/crater_lake_L.jpg");
                 background-position: left;
                 filter: brightness(120%);
 
@@ -156,7 +156,7 @@
             }
 
             &-3 {
-                background-image: url(../img/capitol_reef_L.jpg);
+                background-image: url("../img/capitol_reef_L.jpg");
                 background-position: left;
 
                 @include respond(phone) {

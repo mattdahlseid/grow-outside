@@ -715,18 +715,18 @@ bkg-img-container {
         /* IE 9 */
         transform: scale(1.2); }
       .support__box--photo-1 {
-        background-image: url(../img/tent_rocks_2_L.jpg);
+        background-image: url("../img/tent_rocks_2_L.jpg");
         background-position: 50% 90%;
         filter: brightness(120%); }
       .support__box--photo-2 {
-        background-image: url(../img/crater_lake_L.jpg);
+        background-image: url("../img/crater_lake_L.jpg");
         background-position: left;
         filter: brightness(120%); }
         @media only screen and (max-width: 37.5em) {
           .support__box--photo-2 {
             background-position: 13%; } }
       .support__box--photo-3 {
-        background-image: url(../img/capitol_reef_L.jpg);
+        background-image: url("../img/capitol_reef_L.jpg");
         background-position: left; }
         @media only screen and (max-width: 37.5em) {
           .support__box--photo-3 {
