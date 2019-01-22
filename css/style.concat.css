@@ -84,8 +84,6 @@ bkg-img-container {
   width: 100%;
   height: 100vh;
   background-color: #262626;
-  display: flex;
-  flex-wrap: wrap;
   position: relative;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4), 0px -5px 20px rgba(0, 0, 0, 0.4);
   overflow: hidden; }
@@ -94,7 +92,7 @@ bkg-img-container {
       height: 210vh; } }
   @media only screen and (max-width: 37.5em) {
     .about {
-      height: 180vh; } }
+      height: 210vh; } }
   .about__overlay {
     width: 0;
     height: 0;
@@ -113,60 +111,70 @@ bkg-img-container {
     height: 100%;
     z-index: 2;
     position: relative;
-    display: flex;
-    align-items: center; }
+    float: left; }
     @media only screen and (max-width: 56.25em) {
       .about__img--box {
         position: relative;
         height: 50%;
         width: 100%; } }
-    @media only screen and (max-width: 37.5em) {
-      .about__img--box {
-        margin-top: 12vh;
-        height: 30vh; } }
     .about__img--box-container {
       position: absolute;
       width: 350px;
       height: 76vh;
-      left: 60%;
-      margin-left: -220px;
+      left: 50%;
       box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-      transition: all 0.4s; }
+      transition: all 0.4s;
+      top: 50%;
+      -webkit-transform: translateX(-40%) translateY(-50%);
+      transform: translateX(-40%) translateY(-50%); }
       @media only screen and (max-width: 56.25em) {
         .about__img--box-container {
           margin-top: 15vh;
           width: 70%;
           margin-left: 0;
           margin-right: 0;
-          left: 15%;
-          height: 90vh; } }
-      @media only screen and (max-width: 37.5em) {
-        .about__img--box-container {
-          height: 60vh; } }
+          left: 50%;
+          height: 90vh;
+          top: auto;
+          -webkit-transform: translateX(-50%);
+          transform: translateX(-50%); } }
       .about__img--box-container-img {
         object-fit: cover;
         height: 100%;
         width: 100%;
         position: absolute; }
       .about__img--box-container:hover {
-        transform: translateY(-20px);
-        transform: scale(1.05);
+        -webkit-transform: translateX(-40%) translateY(-50%) scale(1.05);
+        transform: translateX(-40%) translateY(-50%) scale(1.05);
         box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.4); }
+        @media only screen and (max-width: 56.25em) {
+          .about__img--box-container:hover {
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%) scale(1.05); } }
+  .about__text--container {
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-60%) translateY(-50%);
+    transform: translateX(-60%) translateY(-50%); }
+    @media only screen and (max-width: 56.25em) {
+      .about__text--container {
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%); } }
   .about__text--box {
     width: 50%;
     height: 100%;
     z-index: 2;
     text-align: center;
-    padding: 0 11vw 0 0;
-    display: flex;
-    align-items: center; }
+    position: relative;
+    float: right; }
     @media only screen and (max-width: 56.25em) {
       .about__text--box {
         position: relative;
-        width: 70%;
+        width: 100%;
         height: 50%;
-        padding: 60px 0 0 0;
-        left: 15%; } }
+        float: auto; } }
     .about__text--box-header {
       font-size: 30px;
       text-transform: uppercase;
@@ -237,7 +245,7 @@ bkg-img-container {
   width: 100%;
   height: 100vh;
   position: relative;
-  background-image: url("../img/sb_dunes_1_L.jpg");
+  background-image: url("../img/sb_dunes_L.jpg");
   background-attachment: fixed;
   background-position: 50% 80%;
   background-size: cover;
@@ -371,15 +379,16 @@ bkg-img-container {
 .header {
   height: 100vh;
   width: 100%;
-  z-index: 1;
-  display: flex;
-  align-items: center; }
+  z-index: 1; }
   .header__title {
     width: 350px;
     position: absolute;
     left: 7%;
     text-align: center;
-    color: white; }
+    color: white;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%); }
     @media only screen and (max-width: 56.25em) {
       .header__title {
         left: 50%;
@@ -569,7 +578,7 @@ bkg-img-container {
   height: 100vh;
   width: 100%;
   position: relative;
-  background-image: url(../img/yosemite_L.jpg);
+  background-image: url(../img/mist_trail_L.jpg);
   background-attachment: fixed;
   background-size: cover;
   background-position: bottom;
@@ -626,7 +635,7 @@ bkg-img-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2), black), url("../img/yosemite_family_L.jpg");
+    background-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2), black), url("../img/yosemite_family_2_L.jpg");
     filter: grayscale(100%);
     background-size: cover;
     background-position: center; }
@@ -706,18 +715,18 @@ bkg-img-container {
         /* IE 9 */
         transform: scale(1.2); }
       .support__box--photo-1 {
-        background-image: url(../img/tent_rocks_L.jpg);
+        background-image: url(../img/tent_rocks_2_L.jpg);
         background-position: 50% 90%;
         filter: brightness(120%); }
       .support__box--photo-2 {
-        background-image: url(../img/crater_lake_2_L.jpg);
+        background-image: url(../img/crater_lake_L.jpg);
         background-position: left;
         filter: brightness(120%); }
         @media only screen and (max-width: 37.5em) {
           .support__box--photo-2 {
             background-position: 13%; } }
       .support__box--photo-3 {
-        background-image: url(../img/capitol_reef_2_L.jpg);
+        background-image: url(../img/capitol_reef_L.jpg);
         background-position: left; }
         @media only screen and (max-width: 37.5em) {
           .support__box--photo-3 {

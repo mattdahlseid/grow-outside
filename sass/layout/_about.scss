@@ -2,8 +2,6 @@
     width: 100%;
     height: 100vh;
     background-color: $color-dark-gray;
-    display: flex;
-    flex-wrap: wrap;
     position: relative;
     box-shadow: 0px 5px 20px rgba($color-black, .4), 0px -5px 20px rgba($color-black, .4);
     overflow: hidden;
@@ -13,7 +11,7 @@
     }
 
     @include respond(phone) {
-        height: 180vh;
+        height: 210vh;
     }
 
     &__overlay {
@@ -39,40 +37,36 @@
         height: 100%;
         z-index: 2;
         position: relative;
-        display: flex;
-        align-items: center;
-
+        //background-color: orange;
+        float: left;
         @include respond(tab-port) {
             position: relative;
             height: 50%;
             width: 100%;
         }
 
-        @include respond(phone) {
-            margin-top: 12vh;
-            height: 30vh;
-        }
 
         &-container {
             position: absolute;
             width: 350px;
             height: 76vh;
-            left: 60%;
-            margin-left: -220px;
+            left: 50%;
             box-shadow: 4px 4px 10px rgba($color-black, .4);
             transition: all 0.4s;
+            top: 50%;
+            -webkit-transform:  translateX(-40%) translateY(-50%);
+            transform: translateX(-40%) translateY(-50%);
 
             @include respond(tab-port) {
                 margin-top: 15vh;
                 width: 70%;
                 margin-left: 0;
                 margin-right: 0;
-                left: 15%;
+                left: 50%;
                 height: 90vh;
-            }
-
-            @include respond(phone) {
-                height: 60vh;
+                top: auto;
+                -webkit-transform:  translateX(-50%);
+                transform: translateX(-50%);
             }
 
             &-img {
@@ -83,91 +77,115 @@
             }
 
             &:hover {
-                transform: translateY(-20px);
-                transform: scale(1.05);
+                -webkit-transform: translateX(-40%) translateY(-50%) scale(1.05);
+                transform: translateX(-40%) translateY(-50%) scale(1.05);
                 box-shadow: 8px 8px 20px rgba($color-black, .4);
+
+                @include respond(tab-port) {
+                    -webkit-transform: translateX(-50%);
+                    transform: translateX(-50%) scale(1.05);
+                }
             }
 
         }
     }
 
-    &__text--box {
-        width: 50%;
-        height: 100%;
-        z-index: 2;
-        text-align: center;
-        padding: 0 11vw 0 0;
-        display: flex;
-        align-items: center;
-
-        @include respond(tab-port) {
-            position: relative;
-            width: 70%;
-            height: 50%;
-            padding: 60px 0 0 0;
-            left: 15%;
-        }
-
-        &-header {
-            font-size: 30px;
-            text-transform: uppercase;
-            border-bottom: 1px solid $color-green;
-            letter-spacing: 3px;
-            display: inline-block;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-
-            @include respond(phone) {
-                margin-top: 12vh;
-                font-size: 24px;
-            }
-        }
-
-        &-subhead {
-            font-size: 16px;
-            margin-bottom: 20px;
-            font-weight: 900;
-            letter-spacing: 3px;
-            line-height: 24px;
-
-            @include respond(phone) {
-                font-size: 13px;
-            }
-        }
-
-        &-text {
-            font-size: 1.4rem;
-            letter-spacing: 2px;
-            line-height: 30px;
-        }
-
-        &-symbols {
-            width: 70%;
-            height: 100px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            font-weight: 900;
-            letter-spacing: 3px;
-            margin: 15px auto 0 auto;
-            transform: all .5s;
     
+
+    &__text {
+
+        &--container {
+            position: absolute;
+            width: 80%;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translateX(-60%) translateY(-50%);
+            transform: translateX(-60%) translateY(-50%);
+
             @include respond(tab-port) {
-                margin: 30px auto 0 auto;
+                -webkit-transform: translateX(-50%) translateY(-50%);
+                transform: translateX(-50%) translateY(-50%);
+            }
+        }
+    
+        &--box {
+            width: 50%;
+            height: 100%;
+            z-index: 2;
+            text-align: center;
+            //padding: 0 11vw 0 0;
+            position: relative;
+            float: right;
+            //background-color: red;
+
+            @include respond(tab-port) {
+                position: relative;
+                width: 100%;
+                height: 50%;
+                float: auto;
             }
 
-            @include respond(phone) {
-                width: 90%;
+            &-header {
+                font-size: 30px;
+                text-transform: uppercase;
+                border-bottom: 1px solid $color-green;
+                letter-spacing: 3px;
+                display: inline-block;
+                padding-bottom: 10px;
+                margin-bottom: 20px;
+
+                @include respond(phone) {
+                    margin-top: 12vh;
+                    font-size: 24px;
+                }
             }
 
-            &-icon {
-                height: 100%;
-                width: 33%;
-                padding: 10px 10px 0px 10px;
+            &-subhead {
+                font-size: 16px;
+                margin-bottom: 20px;
+                font-weight: 900;
+                letter-spacing: 3px;
+                line-height: 24px;
+
+                @include respond(phone) {
+                    font-size: 13px;
+                }
+            }
+
+            &-text {
+                font-size: 1.4rem;
+                letter-spacing: 2px;
+                line-height: 30px;
+            }
+
+            &-symbols {
+                width: 70%;
+                height: 100px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                font-weight: 900;
+                letter-spacing: 3px;
+                margin: 15px auto 0 auto;
+                transform: all .5s;
+        
+                @include respond(tab-port) {
+                    margin: 30px auto 0 auto;
+                }
+
+                @include respond(phone) {
+                    width: 90%;
+                }
+
+                &-icon {
+                    height: 100%;
+                    width: 33%;
+                    padding: 10px 10px 0px 10px;
+                }
+
             }
 
         }
-
     }
 
 }

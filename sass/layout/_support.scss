@@ -28,7 +28,7 @@
             rgba($color-black, .6),
             rgba($color-black, 0.2),
             rgba($color-black, 1)), 
-        url('../img/yosemite_family_L.jpg');
+        url('../img/yosemite_family_2_L.jpg');
         filter: grayscale(100%);
         background-size: cover;
         background-position: center;
@@ -140,13 +140,13 @@
             }
 
             &-1 {
-                background-image: url(../img/tent_rocks_L.jpg);
+                background-image: url(../img/tent_rocks_2_L.jpg);
                 background-position: 50% 90%;
                 filter: brightness(120%);
             }
 
             &-2 {
-                background-image: url(../img/crater_lake_2_L.jpg);
+                background-image: url(../img/crater_lake_L.jpg);
                 background-position: left;
                 filter: brightness(120%);
 
@@ -156,7 +156,7 @@
             }
 
             &-3 {
-                background-image: url(../img/capitol_reef_2_L.jpg);
+                background-image: url(../img/capitol_reef_L.jpg);
                 background-position: left;
 
                 @include respond(phone) {
@@ -191,7 +191,6 @@
             }
         }
 
-        // make an animation that makes this drop below title after line is drawn
         &--learn-more {
             font-size: 15px;
             position: absolute;
